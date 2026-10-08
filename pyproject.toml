@@ -1,0 +1,27 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pyprover9"
+version = "0.0.32"
+description = "Colab wrapper for the Prover9 theorem prover"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+keywords = ["logic", "automated theorem proving", "prover9"]
+
+authors = [
+  { name = "Brandon Bennett", email="B.Bennett@leeds.ac.uk" }
+]
+
+#[project.urls]
+#Homepage = "https://github.com/..."
+#Repository = "https://github.com/..."
+
+[tool.hatch.build]
+dev-mode-dirs = ["src"]
+
+[tool.hatch.build.targets.wheel]
+#sources = ["src"]
+packages = ["src/pyprover9"]
